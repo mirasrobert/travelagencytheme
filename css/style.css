@@ -529,10 +529,11 @@ body {
 } */
 
 .btn-banner:focus {
-  color: #4e83fd !important;
+  color: #fff !important;
+  background: #f68084 !important;
 }
 .btn-banner:active {
-  color: #4e83fd !important;
+  color: #fff !important;
 }
 
 .btn-banner:hover,
