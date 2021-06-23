@@ -27,10 +27,10 @@
 
     <title>Travel Agency Web Theme</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#main-nav" id="home">
     <!-- HEADER SECTION -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav id="main-nav" class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#">Trek</a>
           <button
@@ -46,19 +46,25 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link text-uppercase" href="#banner">Home</a>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#home">
+                  <span>Home</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="#services">Services</a>
+                <a class="nav-link text-uppercase" href="#services">
+                  <span>Services</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="#features">Features</a>
+                <a class="nav-link text-uppercase" href="#features">
+                  <span>Features</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="#social-media"
-                  >Contact</a
-                >
+                <a class="nav-link text-uppercase" href="#social-media">
+                  <span>Contact</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -287,7 +293,9 @@
         </div>
 
         <hr />
-        <p class="text-center">TREK &copy; <span id="year"></span> Made With Robert Miras <3</p>
+        <p class="text-center">
+          TREK &copy; <span id="year"></span> Made by Robert Miras &#10084;
+        </p>
       </div>
     </footer>
 
@@ -302,7 +310,11 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      // Year
       document.getElementById("year").innerHTML = new Date().getFullYear();
-  </script>
+
+      // Init Scrollspy
+      $("body").scrollspy({ target: "#main-nav" });
+    </script>
   </body>
 </html>

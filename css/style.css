@@ -451,8 +451,11 @@ textarea {
 
 /* WEB STYLING */
 body {
+  position: relative !important; /* for scroll spy need position relative */
   font-family: "Poppins", sans-serif !important;
   overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 #nav-bar {
@@ -474,6 +477,7 @@ header {
   box-shadow: none !important;
   border: none !important;
   outline: none !important;
+  padding: 20px;
 }
 
 .navbar-brand {
@@ -487,13 +491,25 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
+.navbar-nav a {
+  color: #fff !important;
+}
+
 .navbar-nav li {
   padding: 0 10px;
 }
 
 .navbar-nav li a {
-  color: #fff !important;
+  color: #fff;
   font-weight: 600;
+  transition: 250ms ease-in;
+}
+
+.active span {
+  background: #330867 !important;
+  color: #fff !important;
+  border-radius: 30px;
+  padding: 8px;
 }
 
 .navbar-nav li a:hover {
@@ -771,7 +787,6 @@ p {
     margin: 1.5rem 0px;
     font-size: 1.5rem;
   }
-
 }
 
 /* TABLETS */
@@ -792,11 +807,14 @@ p {
   #banner h1 {
     margin: 0;
   }
-
 }
 
 @media (max-width: 500px) {
   #footer .content {
     padding: 2rem;
+  }
+
+  .navbar-nav li a {
+    margin-bottom: 15px;
   }
 }
