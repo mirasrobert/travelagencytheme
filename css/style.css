@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap"); /* --------------------------------------- */
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 div,
@@ -457,6 +461,13 @@ body {
   z-index: 10;
 }
 
+header {
+  -webkit-box-shadow: none;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
 .navbar {
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
   -webkit-box-shadow: none;
@@ -761,9 +772,6 @@ p {
     font-size: 1.5rem;
   }
 
-  #footer .content {
-    padding: 2rem;
-  }
 }
 
 /* TABLETS */
@@ -783,5 +791,12 @@ p {
 
   #banner h1 {
     margin: 0;
+  }
+
+}
+
+@media (max-width: 500px) {
+  #footer .content {
+    padding: 2rem;
   }
 }
